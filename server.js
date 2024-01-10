@@ -15,6 +15,7 @@ const { DB_USER, DB_PASS, DEV } = process.env
 //}
 const dbAddress = '127.0.0.1:27017'
 const url = DEV ? `mongodb://${dbAddress}` : `mongodb://${DB_USER}:${DB_PASS}@${dbAddress}?authSource=company_db`
+//must test this, it's not working today.
 
 const client = new MongoClient(url)
 const dbName = 'company_db'
